@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f0e6; /* cream background */
+  color: #3e2723; /* dark brown text */
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #795548; /* brown */
+  color: white;
+  padding: 20px;
+  width: 220px;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Banner */
+.banner {
+  background-color: #d7ccc8; /* light beige */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.banner h1 {
+  margin-bottom: 5px;
+}
+
+/* Books Grid */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background-color: #fff8f0;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.book-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.book-card h3 {
+  margin: 10px 0 5px;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.2em;
+}
+
+.genre {
+  display: inline-block;
+  background-color: #a1887f;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+/* Recommended Reads */
+.recommended {
+  margin-top: 30px;
+}
+
+.scroll-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.scroll-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-row::-webkit-scrollbar-thumb {
+  background: #a1887f;
+  border-radius: 3px;
+}
+
+.rec-card {
+  flex: 0 0 auto;
+  background-color: #fff3e0;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+}
